@@ -15,18 +15,6 @@ const getLatLong = (location) => {
         })
 }
 
-/*
-const getCurrentWeather = ({ lat, lon }) => {
-    const request = axios.get(`${baseCurrentWeatherUrl}?lat=${lat}&lon=${lon}&units=metric&appid=${api_key}`)
-    return request
-        .then(response => response.data)
-        .catch(error => {
-            alert('FATAL ERROR. Could not retrieve weather')
-            console.log(error)
-        })
-}
-*/
-
 const getCurrentWeather = (location) => {
     return axios.get(`${baseGeoUrl}?q=${location}&appid=${api_key}`)
         .then(response => {

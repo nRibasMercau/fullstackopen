@@ -10,32 +10,6 @@ const Weather = ({ location }) => {
 
     const baseCurrentWeatherIconUrl = 'http://openweathermap.org/img/wn/'
 
-    /*
-    const [latlon, setLatLon] = useState({
-        lat: null, 
-        lon: null
-    })
-    const [currentWeather, setCurrentWeather] = useState([]) 
-
-
-    useEffect(() => {
-        weatherService
-        .getLatLong(location)
-        .then(geoData => {
-            const newLatLon = {
-                lat: geoData[0].lat, 
-                lon: geoData[0].lon
-            }
-            setLatLon(newLatLon)
-            weatherService
-                .getCurrentWeather(latlon.lat, latlon.lon)
-                .then(weatherData => {
-                    setCurrentWeather(weatherData)
-                    console.log(currentWeather)
-                })
-        })
-    }, [])
-    */
     useEffect(() => {
         weatherService
             .getCurrentWeather(location)
